@@ -1,0 +1,8 @@
+#START ZOOK
+bin/zookeeper-server-start.sh config/zookeeper.properties
+
+#START BROKER
+bin/kafka-server-start.sh config/server.properties
+
+#CONSUMER FROM BEGINNING
+bin/kafka-console-consumer.sh --topic quickstart-events --from-beginning --bootstrap-server localhost:9092
